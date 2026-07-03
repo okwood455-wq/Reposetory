@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>info</title>
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+</head>
+<body>
+    <ul>
+        {% for ley in info %}
+            <h1>{{ ley.name }}, {{ ley.surname }}, {{ ley.grade }}></h1>
+            <a href="{% url 'update' ley.id %}">Update</a>
+            <h1><button type="submit" class="btn">Create</button></h1>
+        {% endfor %}
+        
+    </ul>
+</body>
+</html>
